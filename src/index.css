@@ -41,11 +41,14 @@
     }
 
     button {
-        @apply rounded-[24px] font-semibold text-[15px] flex-shrink-0 tracking-[-0.115px] w-fit py-3 px-6 cursor-pointer transition-all duration-300 font-heading
+        @apply rounded-[24px] font-semibold text-[15px] flex-shrink-0 tracking-[-0.115px] py-3 px-6 cursor-pointer transition-all duration-300 font-body
     }
 }
 
 @layer components{
+    .primary-input{
+        @apply rounded-[24px] font-semibold text-[15px] font-body placeholder:text-[14px] placeholder:font-semibold bg-white text-secondary-500 border-none outline-none shadow-md px-6 py-3;
+    }
     .primary-btn{
         @apply bg-primary-400 rounded-[24px] text-primary-100 hover:bg-primary-300
     }
@@ -67,6 +70,7 @@
     --color-secondary-700: #1b262f;
     --color-secondary-500: #36536b;
     --color-secondary-300: #6c8294;
+    --color-secondary-100: #EDF3F8;
 
     --font-heading: 'DMSerifDisplay', sans-serif;
     --font-body: 'PublicSans', sans-serif;
