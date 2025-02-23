@@ -46,6 +46,10 @@
 }
 
 @layer components{
+    .container{
+        @apply px-6 font-body bg-secondary-100
+    }
+
     .primary-input{
         @apply rounded-[24px] font-semibold text-[15px] font-body placeholder:text-[14px] placeholder:font-semibold bg-white text-secondary-500 border-none outline-none shadow-md px-6 py-3;
     }
