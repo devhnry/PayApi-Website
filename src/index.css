@@ -1,2 +1,73 @@
 @import "tailwindcss";
-@theme {  }
+@font-face {
+    font-family: 'PublicSans';
+    src: url('./assets/fonts/PublicSans-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans-VariableItalic';
+    src: url('./assets/fonts/PublicSans-VariableItalic.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DMSerifDisplay';
+    src: url('./assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSerifDisplayItalic';
+    src: url('./assets/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading;
+    }
+
+    p {
+        @apply text-[15px] text-secondary-500 leading-[28px] font-body;
+    }
+
+    button {
+        @apply rounded-[24px] font-semibold text-[15px] flex-shrink-0 tracking-[-0.115px] w-fit py-3 px-6 cursor-pointer transition-all duration-300 font-heading
+    }
+}
+
+@layer components{
+    .primary-btn{
+        @apply bg-primary-400 rounded-[24px] text-primary-100 hover:bg-primary-300
+    }
+
+    .secondary-btn-light{
+        @apply  bg-transparent border-primary-100 border text-primary-100 hover:bg-primary-100 hover:text-secondary-700
+    }
+
+    .secondary-btn-dark{
+        @apply  bg-transparent border-secondary-500 text-secondary-500 border text-primary-100 hover:bg-secondary-500 hover:text-primary-100
+    }
+}
+
+@theme {
+    --color-primary-400: #ba4270;
+    --color-primary-300: #da6d97;
+    --color-primary-100: #fbfcfe;
+
+    --color-secondary-700: #1b262f;
+    --color-secondary-500: #36536b;
+    --color-secondary-300: #6c8294;
+
+    --font-heading: 'DMSerifDisplay', sans-serif;
+    --font-body: 'PublicSans', sans-serif;
+}

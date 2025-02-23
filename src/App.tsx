@@ -1,7 +1,7 @@
 export const App = () => {
   return (
     <>
-        <h1 className="">PayAPI</h1>
+        <button className="primary-btn">Schedule a Demo</button>
     </>
   )
 }
