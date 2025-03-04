@@ -8,13 +8,13 @@ export const Home = () => {
 				<>
 						<NavBar />
 						<Container className={`flex flex-col items-center gap-6 py-8`}>
-								<img className={`bg-transparent rounded-[20px] w-[128px] h-[240px]`} src={iphoneMockup} alt={'mockup'} />
-								<div className={`grid`}>
+								<img className={`bg-transparent rounded-[20px] hero-image`} src={iphoneMockup} alt={'mockup'} />
+								<div className={`grid w-full`}>
 										<h1 className={`text-center heading-one leading-[112%] mb-[24px]`}>
 												Start building with our APIs for absolutely free</h1>
-										<div className={`flex flex-col gap-4`}>
+										<div className={`flex flex-col gap-4 xs:relative xs:max-w-[455px] mx-auto w-full`}>
 												<input className={`primary-input`} type={"email"} placeholder={"Enter email address"}/>
-												<button className={`primary-btn`}>Schedule a Demo</button>
+												<button className={`primary-btn xs:absolute xs:right-0`}>Schedule a Demo</button>
 										</div>
 								</div>
 								<p className={`text-secondary-300`}>Have any questions ? <span className={`font-bold`}>Contact Us</span> </p>

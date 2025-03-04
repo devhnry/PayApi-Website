@@ -50,12 +50,16 @@
 }
 
 @layer components{
-    .container{
-        @apply px-4 font-body w-full max-w-[1560px] mx-auto
+    .container-box{
+        @apply px-6 sm:px-9 font-body w-full max-w-[1560px] mx-auto
     }
 
     .heading-one{
-        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] max-w-[573px] w-full;
+        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] max-w-[580px] w-full mx-auto;
+    }
+
+    .hero-image{
+        @apply h-[clamp(240px,calc(240px+31*((100vw-375px)/393)),271px)] w-[clamp(128px,calc(128px+14*((100vw-375px)/393)),142px)];
     }
 
     .primary-input{
