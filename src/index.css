@@ -33,7 +33,7 @@
 
 @layer base {
     h1, h2, h3, h4, h5, h6 {
-        @apply font-heading;
+        @apply font-heading text-secondary-500;
     }
 
     p {
@@ -43,11 +43,15 @@
     button {
         @apply rounded-[24px] font-semibold text-[15px] flex-shrink-0 tracking-[-0.115px] py-3 px-6 cursor-pointer transition-all duration-300 font-body
     }
+
+    body{
+        @apply bg-secondary-100
+    }
 }
 
 @layer components{
     .container{
-        @apply px-6 font-body bg-secondary-100
+        @apply px-4 font-body w-full max-w-[1560px] mx-auto
     }
 
     .primary-input{
