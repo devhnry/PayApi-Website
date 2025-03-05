@@ -5,11 +5,11 @@ import iphoneMockup from "../assets/images/IphoneMockup.svg"
 
 export const Home = () => {
 		return (
-				<main className={`relative overflow-x-hidden`}>
+				<main className={`relative overflow-x-hidden max-w-[1440px] mx-auto`}>
 						<NavBar />
 						<Container className={`flex flex-col items-center gap-6 py-8 lg:py-20`}>
 								<div className={`hero-circle`}></div>
-								<div className={`lg:flex flex-row-reverse mx-auto w-full items-center gap-10`}>
+								<div className={`lg:flex flex-row-reverse mx-auto w-full items-center gap-30`}>
 										<img className={`hero-image mb-[clamp(24px,calc(24px+16*((100vw-375px)/393)),40px)] lg:mb-0 lg:h-[460px] lg:w-[240px] lg:rounded-[33px]`} src={iphoneMockup} alt={'mockup'}/>
 										<div>
 												<div className={`grid w-full`}>

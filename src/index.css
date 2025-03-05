@@ -51,19 +51,22 @@
 
 @layer components{
     .container-box{
-        @apply px-6 sm:px-9 font-body w-full max-w-[1560px] mx-auto
+        @apply px-[clamp(24px,calc(24px+96*((100vw-375px)/1065)),120px)] font-body w-full max-w-[1440px] mx-auto
     }
 
     .hero-circle{
-        @apply size-[clamp(780px,calc(780px+170*((100vw-375px)/525)),960px)] bg-secondary-500 opacity-[0.15] rounded-full absolute -z-10 -top-[clamp(560px,calc(560px+80*((100vw-375px)/393)),640px)] ;
+        @apply size-[clamp(780px,calc(780px+170*((100vw-375px)/525)),960px)] bg-secondary-500 opacity-[0.15] rounded-full absolute -z-10 -top-[clamp(560px,calc(560px+80*((100vw-375px)/393)),640px)] lg:size-[780px] lg:right-[clamp(-320px,calc(-320px+140*((100vw-900px)/540)),-180px)] lg:top-[clamp(-300px,calc(-300px+60*((100vw-900px)/540)),-240px)];
+        /*lg:-right-[180px] lg:-top-[240px]*/
+        /*right: -320px;*/
+        /*top: -300px;*/
     }
 
     .heading-one{
-        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] lg:text-[clamp(54px,calc(54px+18*((100vw-900px)/480)),72px)] max-w-[580px] lg:pb-6 lg:max-w-[500px] w-full mx-auto;
+        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] lg:text-[clamp(54px,calc(54px+18*((100vw-900px)/480)),72px)] max-w-[580px] lg:pb-6 lg:max-w-[clamp(480px,calc(480px+65*((100vw-900px)/460)),545px)] w-full mx-auto;
     }
 
     .hero-image{
-        @apply bg-transparent rounded-[20px] mx-auto h-[clamp(240px,calc(240px+31*((100vw-375px)/393)),271px)] w-[clamp(128px,calc(128px+14*((100vw-375px)/393)),142px)];
+        @apply bg-transparent rounded-[20px] mx-auto h-[clamp(240px,calc(240px+51*((100vw-375px)/393)),291px)] w-[clamp(128px,calc(128px+34*((100vw-375px)/393)),162px)];
     }
 
     .primary-input{
