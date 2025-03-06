@@ -12,6 +12,8 @@ import tesla from "../assets/icons/companies/tesla.svg"
 import codeSnippet from "../assets/images/code-snippet.svg"
 import iphoneMockup2 from "../assets/images/simple-ui-mockup-1.svg"
 import iphoneMockup3 from "../assets/images/simple-ui-mockup-2.svg"
+import {Footer} from "../components/Footer.tsx";
+import {EmailDemoForm} from "../components/EmailDemoForm.tsx";
 
 
 export const Home = () => {
@@ -28,10 +30,7 @@ export const Home = () => {
 												<div className={`grid w-full`}>
 														<h1 className={`text-center lg:text-left heading-one leading-[112%] lg:leading-[100%] mb-[24px]`}>
 																Start building with our APIs for absolutely free.</h1>
-														<div className={`flex flex-col gap-4 xs:relative xs:max-w-[455px] mx-auto lg:mx-0 w-full`}>
-																<input className={`primary-input`} type={"email"} placeholder={"Enter email address"}/>
-																<button className={`primary-btn xs:absolute xs:right-0`}>Schedule a Demo</button>
-														</div>
+														<EmailDemoForm />
 												</div>
 												<p className={`text-secondary-300 text-center lg:text-left pl-2 pt-4`}>Have any questions ? <span
 														className={`font-bold`}>Contact Us</span></p>
@@ -60,7 +59,7 @@ export const Home = () => {
 						</Container>
 						<Container
 								className={`pb-24 lg:flex flex-row-reverse gap-[clamp(40px,calc(40px+90*((100vw-900px)/540)),130px)] items-center relative`}>
-								<div className={`hero-circle-three z-10`}></div>
+								<div className={`hero-circle-three z-10 hidden lg:block`}></div>
 								<div className={`flex gap-5 mb-[48px] lg:mb-0 mx-auto w-fit relative z-10`}>
 										<img className={`iphone-mockup`} src={iphoneMockup2} alt={`code-snippet`}/>
 										<img className={`iphone-mockup`} src={iphoneMockup3} alt={`code-snippet`}/>
@@ -70,6 +69,7 @@ export const Home = () => {
 										<p className={`opacity-[0.8] text-secondary-300 leading-[186%] max-w-[550px] lg:max-w-[418px] mx-auto`}>Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.</p>
 								</div>
 						</Container>
+						<Footer />
 				</main>
 		)
 }
