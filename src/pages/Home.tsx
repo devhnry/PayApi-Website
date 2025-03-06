@@ -10,6 +10,8 @@ import oracle from "../assets/icons/companies/oracle.svg"
 import tesla from "../assets/icons/companies/tesla.svg"
 
 import codeSnippet from "../assets/images/code-snippet.svg"
+import iphoneMockup2 from "../assets/images/simple-ui-mockup-1.svg"
+import iphoneMockup3 from "../assets/images/simple-ui-mockup-2.svg"
 
 
 export const Home = () => {
@@ -54,6 +56,18 @@ export const Home = () => {
 								<div className={`text-center lg:text-left grid gap-4 lg:gap-2 h-fit`}>
 										<h2 className={`heading-two text-secondary-500`}>Easy to implement</h2>
 										<p className={`opacity-[0.8] text-secondary-300 leading-[186%] max-w-[550px] lg:max-w-[418px] mx-auto`}>Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.</p>
+								</div>
+						</Container>
+						<Container
+								className={`pb-24 lg:flex flex-row-reverse gap-[clamp(40px,calc(40px+90*((100vw-900px)/540)),130px)] items-center relative`}>
+								<div className={`hero-circle-three z-10`}></div>
+								<div className={`flex gap-5 mb-[48px] lg:mb-0 mx-auto w-fit relative z-10`}>
+										<img className={`iphone-mockup`} src={iphoneMockup2} alt={`code-snippet`}/>
+										<img className={`iphone-mockup`} src={iphoneMockup3} alt={`code-snippet`}/>
+								</div>
+								<div className={`text-center lg:text-left grid gap-4 lg:gap-2 h-fit mr-auto`}>
+										<h2 className={`heading-two text-secondary-500`}>Simple UI & UX</h2>
+										<p className={`opacity-[0.8] text-secondary-300 leading-[186%] max-w-[550px] lg:max-w-[418px] mx-auto`}>Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.</p>
 								</div>
 						</Container>
 				</main>
