@@ -33,11 +33,11 @@
 
 @layer base {
     h1, h2, h3, h4, h5, h6 {
-        @apply font-heading text-secondary-500;
+        @apply font-heading;
     }
 
     p {
-        @apply text-[15px] text-secondary-500 leading-[28px] font-body;
+        @apply text-[15px] leading-[28px] font-body;
     }
 
     button {
@@ -51,14 +51,15 @@
 
 @layer components{
     .container-box{
-        @apply px-[clamp(24px,calc(24px+96*((100vw-375px)/1065)),120px)] font-body w-full max-w-[1440px] mx-auto
+        @apply px-[clamp(20px,calc(20px+100*((100vw-375px)/1065)),120px)] font-body w-full max-w-[1440px] mx-auto
     }
 
     .hero-circle{
         @apply size-[clamp(780px,calc(780px+170*((100vw-375px)/525)),960px)] bg-secondary-500 opacity-[0.15] rounded-full absolute -z-10 -top-[clamp(560px,calc(560px+80*((100vw-375px)/393)),640px)] lg:size-[780px] lg:right-[clamp(-320px,calc(-320px+140*((100vw-900px)/540)),-180px)] lg:top-[clamp(-300px,calc(-300px+60*((100vw-900px)/540)),-240px)];
-        /*lg:-right-[180px] lg:-top-[240px]*/
-        /*right: -320px;*/
-        /*top: -300px;*/
+    }
+
+    .hero-circle-two{
+        @apply size-[clamp(780px,calc(780px+170*((100vw-375px)/525)),960px)] bg-secondary-500 opacity-[0.15] rounded-full absolute -z-10 -top-[clamp(560px,calc(560px+80*((100vw-375px)/393)),640px)] left-[-210px] lg:size-[780px] lg:left-[clamp(-320px,calc(-320px+140*((100vw-900px)/540)),-180px)] lg:top-[clamp(-440px,calc(-440px+60*((100vw-900px)/540)),-380px)];
     }
 
     .heading-one{
@@ -100,6 +101,7 @@
 
     --breakpoint-xsm: 400px;
     --breakpoint-xs: 460px;
+    --breakpoint-2xs: 600px;
     --breakpoint-sm: 640px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 900px;
