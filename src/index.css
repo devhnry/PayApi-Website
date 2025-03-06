@@ -66,6 +66,10 @@
         @apply bg-secondary-500 opacity-[0.15] rounded-full absolute -z-10 size-[780px] right-[-390px];
     }
 
+    .footer-circle{
+        @apply size-[clamp(780px,calc(780px+170*((100vw-375px)/525)),960px)] bg-secondary-500 opacity-[0.15] rounded-full absolute z-10 -bottom-[clamp(560px,calc(560px+80*((100vw-375px)/393)),640px)] right-[-210px] lg:size-[780px] lg:right-[clamp(-320px,calc(-320px+140*((100vw-900px)/540)),-180px)] lg:bottom-[clamp(-440px,calc(-440px+60*((100vw-900px)/540)),-380px)];
+    }
+
     .heading-one{
         @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] lg:text-[clamp(54px,calc(54px+18*((100vw-900px)/480)),72px)] max-w-[580px] lg:pb-6 lg:max-w-[clamp(480px,calc(480px+65*((100vw-900px)/460)),545px)] w-full mx-auto;
     }
