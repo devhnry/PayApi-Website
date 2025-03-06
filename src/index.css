@@ -66,6 +66,10 @@
         @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] lg:text-[clamp(54px,calc(54px+18*((100vw-900px)/480)),72px)] max-w-[580px] lg:pb-6 lg:max-w-[clamp(480px,calc(480px+65*((100vw-900px)/460)),545px)] w-full mx-auto;
     }
 
+    .heading-two{
+        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/1065)),48px)];
+    }
+
     .hero-image{
         @apply bg-transparent rounded-[20px] mx-auto h-[clamp(240px,calc(240px+51*((100vw-375px)/393)),291px)] w-[clamp(128px,calc(128px+34*((100vw-375px)/393)),162px)];
     }
