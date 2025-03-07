@@ -26,7 +26,7 @@ export const Footer = () => {
 												<img className={`w-[135px]`} src={payApiLogo} alt={`logo`}/>
 												<div className={`flex flex-col gap-8 text-center md:flex-row`}>
 														{footerItems.map((item, i) => (
-																<p className={`text-primary-100/70 capitalize hover:text-primary-100`}
+																<p className={`text-primary-100/70 cursor-pointer capitalize hover:text-primary-100`}
 																	 key={i}>{item}</p>
 														))}
 												</div>

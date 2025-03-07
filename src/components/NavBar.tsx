@@ -15,9 +15,9 @@ export const NavBar = () => {
 										))}
 								</div>
 								<div className={`hidden justify-between items-center md:flex w-full`}>
-										<div className={`flex gap-10 capitalize font-bold opacity-70 hover:opacity-100`}>
+										<div className={`flex gap-10 capitalize font-bold opacity-70`}>
 												{navItems.map((item: string) => (
-														<p key={item}>{item}</p>
+														<p className={`hover:opacity-100`} key={item}>{item}</p>
 												))}
 										</div>
 										<button className={`primary-btn inline-block`}>Schedule a demo</button>

@@ -15,9 +15,30 @@ import iphoneMockup3 from "../assets/images/simple-ui-mockup-2.svg"
 import {Footer} from "../components/Footer.tsx";
 import {EmailDemoForm} from "../components/EmailDemoForm.tsx";
 
+import finance from "../assets/icons/finance.svg"
+import banking from "../assets/icons/banking.svg"
+import payments from "../assets/icons/payments.svg"
+
 
 export const Home = () => {
 		const companies = [tesla, microsoft, hpLaptop, oracle, google, nvidia];
+		const services = [
+				{
+						image: finance,
+						title: "personal finance",
+						description: "Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account. "
+				},
+				{
+						image: banking,
+						title: "banking & coverage",
+						description: "With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts."
+				},
+				{
+						image: payments,
+						title: "consumer payment",
+						description: "It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account."
+				}
+		]
 
 		return (
 				<main className={`relative overflow-x-hidden max-w-[1440px] mx-auto`}>
@@ -69,7 +90,24 @@ export const Home = () => {
 										<p className={`opacity-[0.8] text-secondary-300 leading-[186%] max-w-[550px] lg:max-w-[418px] mx-auto`}>Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.</p>
 								</div>
 						</Container>
-						<Footer />
+						<Container className={`pb-25 pt-10`}>
+								<div className={`flex flex-col gap-12 md:flex-row md:flex-wrap md:justify-around mx-auto w-fit md:mx-0 md:w-full`}>
+										{
+												services.map(service => (
+														<div className={`text-center flex flex-col gap-4 w-fit`}>
+																<div className={`size-[88px] bg-secondary-500 rounded-full relative pb-4 mx-auto`}>
+																		<img
+																				className={`pb-4 w-[40px] h-[52px] absolute top-[50%] left-[50%] -translate-x-[40%] -translate-y-[35%]`}
+																				src={service.image} alt={``}/>
+																</div>
+																<h4 className={`text-[18px] text-secondary-500 font-bold capitalize`}>{service.title}</h4>
+																<p className={`text-secondary-500/70 max-w-[426px] md:max-w-[350px]`}>{service.description}</p>
+														</div>
+												))
+										}
+								</div>
+						</Container>
+						<Footer/>
 				</main>
 		)
 }
