@@ -33,7 +33,7 @@ export const Footer = () => {
 										</div>
 										<div className={`flex gap-6`}>
 												{socialIcons.map(item => (
-														<img src={item} alt={item}/>
+														<img key={item} src={item} alt={item}/>
 												))}
 										</div>
 								</div>
