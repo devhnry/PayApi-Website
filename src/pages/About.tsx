@@ -18,7 +18,9 @@ export const About = () => {
 										<ContentBlock heading={`Our Business`} content={`At the core of our platform is the technical infrastructure APIs that connect consumers. Our innovative product provides key insights for businesses and individuals, as well as robust reporting for traditional financial institutions and developers. `} />
 								</div>
 						</Container>
-						<section className={`about-image`}></section>
+						<section className={`about-image relative`}>
+								<div className={`hero-circle-four hidden 2lg:block`}></div>
+						</section>
 						<Container>
 								<div className={`flex flex-col pt-[48px]`}>
 										<hr className={`opacity-[0.25] text-secondary-500 w-full mx-auto block md:hidden`}/>
