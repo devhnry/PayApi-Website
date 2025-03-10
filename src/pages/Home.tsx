@@ -66,7 +66,7 @@ export const Home = () => {
 										))}
 								</div>
 								<div className={`text-center lg:text-left grid gap-4`}>
-										<h2 className={`heading-two`}>Who we work with</h2>
+										<h2 className={`sub-heading-two`}>Who we work with</h2>
 										<p className={`opacity-[0.7] leading-[186%] max-w-[456px] lg:max-w-[445px] mx-auto`}>Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users.</p>
 										<button className={`secondary-btn-light capitalize mt-[44px] lg:mt-[16px] lg:mx-0 w-fit mx-auto`}>about us</button>
 								</div>
@@ -74,7 +74,7 @@ export const Home = () => {
 						<Container className={`py-24 lg:flex flex-row gap-[clamp(40px,calc(40px+90*((100vw-900px)/540)),130px)] items-center`}>
 								<img className={`rounded-lg mb-[48px] lg:mb-0 max-w-[380px] w-full mx-auto shadow-2xl shadow-secondary-500/40 lg:mx-0`} src={codeSnippet} alt={`code-snippet`} />
 								<div className={`text-center lg:text-left grid gap-4 lg:gap-2 h-fit`}>
-										<h2 className={`heading-two text-secondary-500`}>Easy to implement</h2>
+										<h2 className={`sub-heading-two text-secondary-500`}>Easy to implement</h2>
 										<p className={`opacity-[0.8] text-secondary-300 leading-[186%] max-w-[550px] lg:max-w-[418px] mx-auto`}>Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.</p>
 								</div>
 						</Container>
@@ -86,7 +86,7 @@ export const Home = () => {
 										<img className={`iphone-mockup`} src={iphoneMockup3} alt={`code-snippet`}/>
 								</div>
 								<div className={`text-center lg:text-left grid gap-4 lg:gap-2 h-fit mr-auto`}>
-										<h2 className={`heading-two text-secondary-500`}>Simple UI & UX</h2>
+										<h2 className={`sub-heading-two text-secondary-500`}>Simple UI & UX</h2>
 										<p className={`opacity-[0.8] text-secondary-300 leading-[186%] max-w-[550px] lg:max-w-[418px] mx-auto`}>Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.</p>
 								</div>
 						</Container>

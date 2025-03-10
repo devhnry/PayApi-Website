@@ -51,7 +51,7 @@
 
 @layer components{
     .container-box{
-        @apply px-[clamp(20px,calc(20px+100*((100vw-375px)/1065)),120px)] font-body w-full max-w-[1440px] mx-auto
+        @apply px-[clamp(20px,calc(20px+100*((100vw-375px)/1065)),120px)] font-body w-full mx-auto
     }
 
     .navbar-circle{
@@ -79,6 +79,10 @@
     }
 
     .heading-two{
+        @apply text-[clamp(32px,calc(32px+24*((100vw-375px)/1065)),56px)];
+    }
+
+    .sub-heading-two{
         @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/1065)),48px)];
     }
 
@@ -88,6 +92,11 @@
 
     .hero-image{
         @apply bg-transparent rounded-[20px] mx-auto h-[clamp(240px,calc(240px+51*((100vw-375px)/393)),291px)] w-[clamp(128px,calc(128px+34*((100vw-375px)/393)),162px)];
+    }
+
+    .about-image{
+        @apply bg-cover bg-center bg-no-repeat h-[clamp(300px,calc(300px+200*((100vw-375px)/1065)),500px)] w-full max-w-[1440px] mx-auto;
+        background-image: url("./assets/images/aboutImage.png");
     }
 
     .iphone-mockup{
