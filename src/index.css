@@ -54,6 +54,10 @@
         @apply px-[clamp(20px,calc(20px+100*((100vw-375px)/1065)),120px)] font-body w-full max-w-[1440px] mx-auto
     }
 
+    .navbar-circle{
+        @apply absolute rounded-full size-[780px] bg-secondary-500 opacity-[0.14] -z-10 top-[clamp(-685px,calc(-685px+145*((100vw-375px)/1065)),-540px)] right-[clamp(-420px,calc(-420px+240*((100vw-375px)/1065)),-180px)];
+    }
+
     .hero-circle{
         @apply size-[clamp(780px,calc(780px+170*((100vw-375px)/525)),960px)] bg-secondary-500 opacity-[0.15] rounded-full absolute -z-10 -top-[clamp(560px,calc(560px+80*((100vw-375px)/393)),640px)] lg:size-[780px] lg:right-[clamp(-320px,calc(-320px+140*((100vw-900px)/540)),-180px)] lg:top-[clamp(-300px,calc(-300px+60*((100vw-900px)/540)),-240px)];
     }

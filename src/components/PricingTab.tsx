@@ -7,7 +7,7 @@ export const PricingTab: FC<PricingProps> = ({title, price, features, descriptio
 				<div className={`py-[50px] text-center flex flex-col w-full 2lg:text-left`}>
 						<h3 className={`mb-15 md:mb-4 heading-three text-primary-400 capitalize`}>{title}</h3>
 						<p className={`text-secondary-500 opacity-[0.7] hidden md:inline-block h-[90px]`}>{description}</p>
-						<h1 className={`text-[56px] text-secondary-500`}>${price}.00</h1>
+						<h1 className={`text-[56px] text-secondary-500 xl:-mt-[40px]`}>${price}.00</h1>
 						<hr className={`py-4 opacity-[0.25] text-secondary-500 max-w-[325px] w-full mx-auto`}/>
 						<div className={`flex flex-col gap-y-2 mx-auto 2lg:mx-0`}>
 								{
