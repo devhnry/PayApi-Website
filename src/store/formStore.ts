@@ -1,38 +1,25 @@
-import { create } from "zustand";
+import z from "zod";
 
-interface FormState {
-		name: string;
-		email: string;
-		company: string;
-		title: string;
-		message: string;
-		subscribe: boolean; // For the checkbox
+export const formSchema = z.object({
+		name: z.string({
+				required_error: "This field is required",
+				invalid_type_error: "Name must be a string"
+		}).min(3, {message: "This field can't be empty"}),
 
-		// Actions to update fields and reset the form
-		setField: (field: keyof Omit<FormState, "setField" | "resetForm">, value: string | boolean) => void;
-		resetForm: () => void;
-}
+		email: z.string({
+				required_error: "This field is required",
+				invalid_type_error: "Email must be a string"}
+		).email({ message: "This field can't be empty" }),
 
-export const useFormStore = create<FormState>((set) => ({
-		// Initial state
-		name: "",
-		email: "",
-		company: "",
-		title: "",
-		message: "",
-		subscribe: false,
+		title: z.string(),
 
-		// Action to update any field
-		setField: (field, value) => set({ [field]: value }),
+		company: z.string({
+				required_error: "This field is required"})
+				.min(3, {message: "This field can't be empty"}),
 
-		// Action to reset form to initial state
-		resetForm: () =>
-				set({
-						name: "",
-						email: "",
-						company: "",
-						title: "",
-						message: "",
-						subscribe: false,
-				}),
-}));
+		message: z.string({
+				required_error: "This field is required",})
+				.min(3, {message: "This field can't be empty"}),
+
+		subscribed: z.boolean()
+})
