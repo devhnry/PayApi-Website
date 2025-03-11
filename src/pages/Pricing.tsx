@@ -3,8 +3,13 @@ import {Footer} from "../components/Footer.tsx";
 import {Container} from "../components/Container.tsx";
 import {PricingTab} from "../components/PricingTab.tsx";
 import {plans} from "../data/pricingData.ts";
+import {useEffect} from "react";
 
 const Pricing = () => {
+
+		useEffect(() => {
+				window.scrollTo(0,0);
+		})
 
 		return (
 				<main className={`overflow-hidden`}>

@@ -18,9 +18,16 @@ import {EmailDemoForm} from "../components/EmailDemoForm.tsx";
 import finance from "../assets/icons/finance.svg"
 import banking from "../assets/icons/banking.svg"
 import payments from "../assets/icons/payments.svg"
+import {useEffect} from "react";
+import {useNavigate} from "react-router";
 
 
 export const Home = () => {
+		const navigate = useNavigate();
+		useEffect(() => {
+				window.scrollTo(0,0);
+		})
+
 		const companies = [tesla, microsoft, hpLaptop, oracle, google, nvidia];
 		const services = [
 				{
@@ -53,8 +60,7 @@ export const Home = () => {
 																Start building with our APIs for absolutely free.</h1>
 														<EmailDemoForm />
 												</div>
-												<p className={`text-secondary-300 text-center lg:text-left pl-2 pt-4`}>Have any questions ? <span
-														className={`font-bold`}>Contact Us</span></p>
+												<p className={`text-secondary-300 text-center lg:text-left pl-2 pt-4`}>Have any questions ? <span onClick={() => navigate(`contact`)} className={`font-bold cursor-pointer`}>Contact Us</span></p>
 										</div>
 								</div>
 						</Container>
@@ -94,7 +100,7 @@ export const Home = () => {
 								<div className={`flex flex-col gap-12 md:flex-row md:flex-wrap md:justify-around mx-auto w-fit md:mx-0 md:w-full`}>
 										{
 												services.map(service => (
-														<div className={`text-center flex flex-col gap-4 w-fit`}>
+														<div key={service.title} className={`text-center flex flex-col gap-4 w-fit`}>
 																<div className={`size-[88px] bg-secondary-500 rounded-full relative pb-4 mx-auto`}>
 																		<img
 																				className={`pb-4 w-[40px] h-[52px] absolute top-[50%] left-[50%] -translate-x-[40%] -translate-y-[35%]`}

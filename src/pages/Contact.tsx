@@ -9,8 +9,13 @@ import oracle from "../assets/icons/companies/oracle-dark.svg";
 import google from "../assets/icons/companies/google-dark.svg";
 import nvidia from "../assets/icons/companies/nvidia-dark.svg";
 import {MyForm} from "../components/FormComponent.tsx";
+import {useEffect} from "react";
 
 export const Contact = () => {
+		useEffect(() => {
+				window.scrollTo(0,0);
+		})
+
 		const companies = [tesla, microsoft, hpLaptop, oracle, google, nvidia];
 		return (
 				<main className={`overflow-hidden`}>

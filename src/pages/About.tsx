@@ -2,9 +2,14 @@ import {NavBar} from "../components/NavBar.tsx";
 import {Footer} from "../components/Footer.tsx";
 import {Container} from "../components/Container.tsx";
 import {ContentBlock} from "../components/ContentBlock.tsx";
+import {useEffect} from "react";
 
 
 export const About = () => {
+		useEffect(() => {
+				window.scrollTo(0,0);
+		})
+
 		const about =
 				[{category: "Team Members", value: "300+"}, {category: "Office in the Us", value: "3"}, {category: "Transactions analyzed", value: "10M+"}]
 

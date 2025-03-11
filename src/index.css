@@ -49,6 +49,12 @@
     }
 }
 
+@layer utilities {
+    .hover\:filter-custom:hover {
+        filter: invert(72%) sepia(12%) saturate(4623%) hue-rotate(294deg) brightness(90%) contrast(94%);
+    }
+}
+
 @layer components{
     .container-box{
         @apply px-[clamp(20px,calc(20px+100*((100vw-375px)/1065)),120px)] font-body w-full mx-auto
