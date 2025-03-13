@@ -35,11 +35,11 @@ export const NavBar: FC<Props> = ({activeCircle}) => {
 										<div className={`flex gap-10 capitalize font-bold text-secondary-500 *:cursor-pointer`}>
 												{navItems.map((item: string, i: number) => (
 														<m.p initial={{opacity: 0, y: 13}}
-																 whileHover={{ opacity: 1 }}
+																 // whileHover={{ opacity: 1 }}
 																 animate={{opacity: 0.7, y: 0, transition: {
 																				 duration: 0.4,
 																				 delay: i * 0.15 + 0.4
-																		 }}} onClick={() => navigate(`/${item}`)} className={``} key={item}>{item}</m.p>
+																		 }}} onClick={() => navigate(`/${item}`)} className={`hover:opacity-1`} key={item}>{item}</m.p>
 												))}
 										</div>
 										<m.button initial={{opacity: 0,}}

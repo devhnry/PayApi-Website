@@ -85,7 +85,7 @@
     }
 
     .heading-one{
-        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] lg:text-[clamp(54px,calc(54px+18*((100vw-900px)/480)),72px)] max-w-[580px] lg:pb-6 lg:max-w-[clamp(480px,calc(480px+65*((100vw-900px)/460)),545px)] w-full mx-auto;
+        @apply text-[clamp(32px,calc(32px+16*((100vw-375px)/225)),48px)] lg:text-[clamp(54px,calc(54px+16*((100vw-900px)/480)),70px)] max-w-[580px] lg:pb-6 lg:max-w-[clamp(480px,calc(480px+65*((100vw-900px)/460)),545px)] w-full mx-auto;
     }
 
     .heading-two{

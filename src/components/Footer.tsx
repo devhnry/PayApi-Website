@@ -8,6 +8,8 @@ import linkedin from "../assets/icons/socials/linkedin.svg"
 import payApiLogo from "../assets/icons/logo-white.svg"
 import {useNavigate} from "react-router";
 
+import {motion as m} from "framer-motion"
+
 export const Footer = () => {
 		const socialIcons: string[] = [facebook,twitter, linkedin];
 		const footerItems: string[] = ["pricing", "about", "contact"]
@@ -17,7 +19,7 @@ export const Footer = () => {
 				<footer>
 						<Container className={`pb-26`}>
 								<div className={`flex flex-col gap-8 lg:flex-row items-center lg:justify-between`}>
-										<h3 className={`heading-two text-center text-secondary-500`}>Ready to start?</h3>
+										<m.h3 initial={{ y: 20, opacity: 0 }} whileInView={{opacity: 1, y:0, transition: { duration: 0.7} }} viewport={{once: true}} className={`heading-two text-center text-secondary-500`}>Ready to start?</m.h3>
 										<EmailDemoForm />
 								</div>
 						</Container>
@@ -34,8 +36,12 @@ export const Footer = () => {
 												</div>
 										</div>
 										<div className={`flex gap-6`}>
-												{socialIcons.map(item => (
-														<img className={`hover:filter-custom transition-all duration-150 cursor-pointer`} key={item} src={item} alt={item}/>
+												{socialIcons.map((item,i) => (
+														<m.img
+																initial={{ scale: 0.2 }}
+																whileInView={{scale: 1, transition: {
+																		duration: 0.2, delay: 0.1 * i + 0.2} }}
+																viewport={{once: true}} className={`hover:filter-custom transition-all duration-150 cursor-pointer`} key={item} src={item} alt={item}/>
 												))}
 										</div>
 								</div>
