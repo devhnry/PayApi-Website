@@ -47,6 +47,11 @@
     body{
         @apply bg-secondary-100
     }
+
+    svg {
+        will-change: transform, opacity;
+        transform: translateZ(0);
+    }
 }
 
 @layer utilities {
