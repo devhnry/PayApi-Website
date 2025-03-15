@@ -2,12 +2,19 @@
 import {motion as m} from "framer-motion";
 import NavigationStore from "../store/NavigationStore.tsx";
 import {useNavigate} from "react-router";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const NavMenu= () => {
 		const {menuIsOpen, setCenterAligned, setMenuIsOpen} = NavigationStore()
 		const navItems: string[] = ["pricing", "about", "contact"]
 		const navigate = useNavigate()
+
+		const [isVisible, setIsVisible] = useState(false);
+
+		useEffect(() => {
+				// Update visibility when the menu opens
+				if (menuIsOpen) setIsVisible(true);
+		}, [menuIsOpen]);
 
 		useEffect(() => {
 				const handleResize = () => {
@@ -41,13 +48,17 @@ export const NavMenu= () => {
 
 		return (
 				<m.nav
-						initial={{ x: "100%", opacity: 1 }}
-						animate={{ x: menuIsOpen ? "10%" : "100%",  transition: {
+						initial={{ x: "100%", opacity: 1}}
+						animate={{ x: menuIsOpen ? "10%" : "100%", transition: {
 										duration: 0.8,
 										type: "spring",
 										ease: [0.76, 0, 0.24, 1]
 								}}}
-						className={`absolute inset-0 bg-secondary-700 z-50 max-w-[500px] w-full ml-auto`}>
+						onAnimationComplete={() => {
+								// Hide the element only after the exit animation is done
+								if (!menuIsOpen) setIsVisible(false);
+						}}
+						className={`absolute inset-0 bg-secondary-700 z-50 max-w-[500px] w-full ml-auto ${isVisible ? 'block' : 'hidden'}`}>
 
 						<div className={`absolute z-[100] h-fit top-[130px] left-[48px] text-primary-100 right-[80px]`}>
 								<div className={`grid gap-1 w-full text-secondary-500/70 pb-14`}>
