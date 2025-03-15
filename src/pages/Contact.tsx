@@ -12,8 +12,11 @@ import {MyForm} from "../components/FormComponent.tsx";
 import {useEffect} from "react";
 
 import { motion as m } from "framer-motion"
+import {NavMenu} from "../components/NavMenu.tsx";
+
 
 export const Contact = () => {
+
 		useEffect(() => {
 				window.scrollTo(0,0);
 		})
@@ -22,6 +25,7 @@ export const Contact = () => {
 		return (
 				<main className={`overflow-hidden`}>
 						<NavBar activeCircle={true} />
+						<NavMenu />
 						<Container className={`text-center text-secondary-500 py-12 lg:py-16`}>
 								<m.h1 className={`heading-two leading-[75%] max-w-[570px] mx-auto sm:px-16 lg:mx-0 lg:px-0 lg:max-w-[650px] lg:text-left lg:pb-8 overflow-hidden`}>
 										{"Submit a help request and we’ll get in touch shortly.".split(" ").map((word, i) => (

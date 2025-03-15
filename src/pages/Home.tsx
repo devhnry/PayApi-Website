@@ -22,6 +22,7 @@ import {useEffect, useRef} from "react";
 import {useNavigate} from "react-router";
 
 import { motion as m , useScroll, useTransform } from "framer-motion";
+import {NavMenu} from "../components/NavMenu.tsx";
 
 export const Home = () => {
 		const navigate = useNavigate();
@@ -58,6 +59,7 @@ export const Home = () => {
 
 		useEffect(() => {
 				window.scrollTo(0,0);
+
 		})
 
 		const companies = [tesla, microsoft, hpLaptop, oracle, google, nvidia];
@@ -82,8 +84,10 @@ export const Home = () => {
 		return (
 				<main className={`relative overflow-x-hidden max-w-[1440px] mx-auto`}>
 						<NavBar />
+						<NavMenu />
 						<Container className={`flex flex-col items-center gap-6 py-8 lg:py-20 text-secondary-500`}>
-								<m.div initial={{opacity: 0}} animate={{opacity: 0.15, transition: { duration: 0.3 }}} className={`hero-circle`}></m.div>
+								<m.div initial={{opacity: 0}} animate={{opacity: 0.15, transition: { duration: 0.3 }}}
+											 className={`hero-circle`}></m.div>
 								<div className={`lg:flex flex-row-reverse mx-auto w-full items-center gap-28`}>
 										<m.img initial={{scale: 0.75, opacity: 0.5}}
 													 animate={{

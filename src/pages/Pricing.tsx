@@ -7,6 +7,7 @@ import {useEffect} from "react";
 
 import {motion as m} from "framer-motion";
 import {useLocation} from "react-router";
+import {NavMenu} from "../components/NavMenu.tsx";
 
 const Pricing = () => {
 
@@ -17,6 +18,7 @@ const Pricing = () => {
 		return (
 				<main className={`overflow-hidden`}>
 						<NavBar activeCircle={true} />
+						<NavMenu />
 						<Container className={`mt-[80px] mb-[40px] md:my-[80px]`}>
 								<m.h1 className={`heading-two text-secondary-500 text-center 2lg:text-left overflow-hidden`}>
 										{"Pricing".split('').map((letter, index) => (

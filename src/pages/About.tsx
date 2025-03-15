@@ -4,8 +4,10 @@ import {Container} from "../components/Container.tsx";
 import {ContentBlock} from "../components/ContentBlock.tsx";
 import {useEffect} from "react";
 import {motion as m} from "framer-motion"
+import {NavMenu} from "../components/NavMenu.tsx";
 
 export const About = () => {
+
 		useEffect(() => {
 				window.scrollTo(0,0);
 		})
@@ -16,6 +18,7 @@ export const About = () => {
 		return (
 				<main className={`overflow-hidden`}>
 						<NavBar activeCircle={true}/>
+						<NavMenu />
 						<Container className={`text-secondary-500 py-12 md:py-16 text-center md:text-left`} maxWidth={1250}>
 								<m.h1 className={`heading-two max-w-[730px] text-center lg:text-left w-full leading-[110%] mx-auto lg:mx-0 overflow-hidden`}>
 										{"We empower innovators".split(" ").map((word, i) => (
