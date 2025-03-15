@@ -1,10 +1,11 @@
 import z from "zod";
 import { zodResolver } from '@hookform/resolvers/zod'
-import {FieldValues, FormProvider, useForm} from "react-hook-form";
-import {formSchema} from "../store/formStore.ts";
-import {InputComponent, inputValue} from "./InputComponent.tsx";
+import { FieldValues, FormProvider, useForm} from "react-hook-form";
+import { formSchema} from "../store/formStore.ts";
+import { InputComponent, inputValue} from "./InputComponent.tsx";
+import { motion as m } from "framer-motion"
 
-import check from "../assets/icons/check.svg"
+import check from "../assets/icons/check-white.svg"
 
 export const MyForm = () => {
 		type FormData = z.infer<typeof formSchema>
@@ -26,11 +27,17 @@ export const MyForm = () => {
 
 		return ((
 				<FormProvider {...methods} >
-						<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-[500px] mx-auto lg:mx-0 w-full">
-								{fields.map((field) => (
-										<InputComponent key={field.field} value={field.field as inputValue} placeholder={field.placeholder} />
+						<m.form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-[500px] mx-auto lg:mx-0 w-full">
+								{fields.map((field, index: number) => (
+										<m.div initial={{ opacity: 0, y: 20 }}
+													 animate={{ opacity: 1, y: 0 }}
+													 transition={{ delay: index * 0.1 + 0.3 }} className={``}>
+												<InputComponent key={field.field} value={field.field as inputValue} placeholder={field.placeholder} />
+										</m.div>
 								))}
-								<div className={`grid grid-cols-[24px_1fr] gap-4 items-center`}>
+								<m.div initial={{ opacity: 0, y: 20 }}
+											 animate={{ opacity: 1, y: 0 }}
+											 transition={{ delay: 0.8 }} className={`grid grid-cols-[24px_1fr] gap-4 items-center`}>
 										<div className={`relative bg-secondary-500/50 h-[24px]`}>
 												<input
 														{...register("subscribed")}
@@ -45,11 +52,13 @@ export const MyForm = () => {
 														/>
 												)}
 										</div>
-										<label className={`text-left text-[15px] leading-[125%] opacity-[0.75]`}>Stay up-to-date with company announcements
-																																							and updates to our API</label>
-								</div>
-								<button type="submit" className="secondary-btn-dark w-fit">Submit</button>
-						</form>
+										<label className={`text-left text-[15px] leading-[125%] opacity-[0.75]`}>Stay up-to-date with company announcements and updates to our API</label>
+								</m.div>
+								<m.button initial={{ opacity: 0, scale: 0.5 }}
+													whileInView={{ opacity: 1, scale: 1 }}
+													viewport={{once: true}}
+													type="submit" className="secondary-btn-dark w-fit">Submit</m.button>
+						</m.form>
 				</FormProvider>
 		));
 }

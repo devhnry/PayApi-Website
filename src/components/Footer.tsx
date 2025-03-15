@@ -19,7 +19,7 @@ export const Footer = () => {
 				<footer>
 						<Container className={`pb-26`}>
 								<div className={`flex flex-col gap-8 lg:flex-row items-center lg:justify-between`}>
-										<m.h3 initial={{ y: 20, opacity: 0 }} whileInView={{opacity: 1, y:0, transition: { duration: 0.7} }} viewport={{once: true}} className={`heading-two text-center text-secondary-500`}>Ready to start?</m.h3>
+										<m.h3 initial={{ y: 20, opacity: 0 }} whileInView={{opacity: 1, y:0, transition: { duration: 0.7} }} viewport={{once: false }} className={`heading-two text-center text-secondary-500`}>Ready to start?</m.h3>
 										<EmailDemoForm />
 								</div>
 						</Container>
@@ -40,7 +40,7 @@ export const Footer = () => {
 														<m.img
 																initial={{ scale: 0.2 }}
 																whileInView={{scale: 1, transition: {
-																		duration: 0.2, delay: 0.1 * i + 0.2} }}
+																		duration: 0.2, delay: i * 0.08} }}
 																viewport={{once: true}} className={`hover:filter-custom transition-all duration-150 cursor-pointer`} key={item} src={item} alt={item}/>
 												))}
 										</div>
